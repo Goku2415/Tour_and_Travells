@@ -1,38 +1,97 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* ===== CARD ===== */
+.card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
   display: flex;
   flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+/* Image */
+.image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* Tour Info */
+.tour-info {
+  padding: 20px;
+  flex-grow: 1;
+}
+
+/* Price & Name */
+.tour-details {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.tour-price {
+  color: #2ecc71;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.tour-name {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Description */
+.description {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #555;
+}
+
+.read-more {
+  color: #007bff;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+/* Button */
+.btn-red {
+  margin: 20px;
+  padding: 10px;
+  border: none;
+  background: #ff4d4d;
   color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.btn-red:hover {
+  background: #e60000;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* ===== RESPONSIVE ===== */
+
+/* Tablet */
+@media (max-width: 900px) {
+  .image {
+    height: 200px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .image {
+    height: 180px;
+  }
+
+  .tour-details {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
   }
 }
